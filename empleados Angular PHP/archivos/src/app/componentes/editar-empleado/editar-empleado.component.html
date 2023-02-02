@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-head">
+        editar empleado
+    </div>
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="formularioEmpleados" (ngSubmit)="enviarDatos()">
+            <div class="mb-3 row">
+                <label for="" class="col-sm-2 col-form-label">Nombre</label>
+                <div class="col-sm-10">
+                    <input required type="text" formControlName="nombre" class="form-control" id="nombre" placeholder="escribe tu nombre">
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="" class="col-sm-2 col-form-label">correo</label>
+                <div class="col-sm-10">
+                    <input required type="text" class="form-control" formControlName="correo" id="correo" placeholder="escribe tu correo">
+                </div>
+            </div>
+
+            <div class="btn-group" role="group">
+                <button type="submit" class="btn btn-success">modificar</button>
+                <button type="button" routerLink="/listar-empleado" class="btn btn-danger">cancelar</button>
+            </div>
+        </form>
+    </div>
+
+
+</div>
